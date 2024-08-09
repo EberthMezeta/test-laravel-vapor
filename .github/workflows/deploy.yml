@@ -20,6 +20,18 @@ jobs:
         run: composer global require laravel/vapor-cli
       - name: Install Project Dependencies
         run: composer install --no-interaction --prefer-dist --optimize-autoloader
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'  # Ajusta la versión de Node.js según lo que necesites
+
+      - name: Install npm dependencies
+        run: npm ci
+
+      - name: Build assets
+        run: npm run build
+        
       - name: Deploy Environment
         run: ./vendor/bin/vapor deploy production
         env:

@@ -1,7 +1,12 @@
-<div>
-    @if($qrCode)
-        <div>{!! $qrCode !!}</div>
-    @else
-        <p>No se pudo generar el código QR.</p>
-    @endif
+<div class="flex items-center justify-center w-full h-full">
+    {!! $qrCode !!}
 </div>
+
+
+{{-- @script
+<script>
+     const width = window.innerWidth;
+    $wire.updateSize( width, width);
+
+</script>
+@endscript --}}

@@ -11,10 +11,20 @@
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     {{ __("You're logged in!") }}
 
-                    <livewire:q-r-generador url="https://www.google.com/" />
 
                 </div>
             </div>
         </div>
     </div>
+    <div  class="w-full h-full">
+        <livewire:q-r-generador url="https://www.ocm.com" :size="250" />
+    </div>
+
+
+
+
+
+
+
+
 </x-app-layout>
